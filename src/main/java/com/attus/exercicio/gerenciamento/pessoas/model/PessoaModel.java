@@ -1,19 +1,32 @@
 package com.attus.exercicio.gerenciamento.pessoas.model;
 
-import java.util.List;
+import com.attus.exercicio.gerenciamento.pessoas.domain.jdbc.PessoaJdbcDomain;
 
-import com.attus.exercicio.gerenciamento.pessoas.dto.EnderecoDto;
-import com.attus.exercicio.gerenciamento.pessoas.dto.EnderecoPrincipalDto;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter @Setter @AllArgsConstructor
-public class PessoaModel {
+public class PessoaModel extends PessoaJdbcDomain {
+	private static final long serialVersionUID = -2906657458206697596L;
 	private Long id;
 	private String nome;
 	private String dtNascimento;
-	private List<EnderecoDto> lsEndereco;
-	private EnderecoPrincipalDto enderecoPrincipal;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDtNascimento() {
+		return dtNascimento;
+	}
+	public void setDtNascimento(String dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
+	
 }

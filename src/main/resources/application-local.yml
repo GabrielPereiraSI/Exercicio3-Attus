@@ -1,0 +1,29 @@
+server:
+  port: 8080
+          
+spring:
+  datasource:
+    jdbcUrl: jdbc:Server=localhost;Database=pessoa;Trusted_Connection=True;
+    username: root
+    password: root
+    driver-class-name: link do server
+    type: hikari
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 12
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      auto-commit: true
+      
+eureka:
+  instance:
+    healthCheckUrl: http://${eureka.hostname}:${server.port}/<adicione_aqui_seu_path_healthcheck>
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${VARIAVEIS DE AMBIENTE}
+      
+aplicacao:
+  servidor-ultron: ${VARIAVEIS DE AMBIENTE}
+

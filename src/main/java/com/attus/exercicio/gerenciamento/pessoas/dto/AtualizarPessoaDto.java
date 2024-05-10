@@ -1,6 +1,7 @@
 package com.attus.exercicio.gerenciamento.pessoas.dto;
 
-public class PessoaDto {
+public class AtualizarPessoaDto {
+
 	private Long id;
 	private String nome;
 	private String dtNascimento;

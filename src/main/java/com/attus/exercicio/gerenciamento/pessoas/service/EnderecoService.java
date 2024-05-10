@@ -6,7 +6,7 @@ import com.attus.exercicio.gerenciamento.pessoas.dto.EnderecoDto;
 
 public interface EnderecoService {
 
-	List<EnderecoDto> findEnderecos();
-	EnderecoDto findEndereco();
+	List<EnderecoDto> findEnderecos(Long idPessoa);
+	EnderecoDto findEndereco(Long idPessoa);
 	
 }
